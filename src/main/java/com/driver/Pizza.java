@@ -10,7 +10,7 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
-        arr=new String[4];
+        this.arr=new String[4];
         if(isVeg){
             price=300;
             arr[0]="Base Price Of The Pizza: 300"+"\n";
