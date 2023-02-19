@@ -30,26 +30,34 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
+        if(arr[1]==null){
+            Sum+=80;
+        }
        arr[1]="Extra Cheese Added: 80\n";
-       Sum+=80;
     }
 
     public void addExtraToppings(){
         // your code goes here
         if(isVeg){
-            arr[2]="Extra Toppings For Veg Pizza = 70\n";
-            Sum+=70;
-        }
+            if(arr[2]==null) {
+                Sum += 70;
+                arr[2] = "Extra Toppings Added: 70\n";
+            }
+            }
         else{
-            arr[2]="Extra Toppings For Non-veg Pizza = 120\n";
-            Sum+=120;
+            if(arr[2]==null) {
+                Sum += 120;
+                arr[2] = "Extra Toppings Added: 120\n";
+            }
         }
     }
 
     public void addTakeaway(){
         // your code goes here
-        arr[3]="Paperbag Added: 20\n";
-        Sum+=20;
+        if(arr[3]==null) {
+            arr[3] = "Paperbag Added: 20\n";
+            Sum += 20;
+        }
     }
 
     public String getBill(){
