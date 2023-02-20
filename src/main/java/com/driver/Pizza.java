@@ -25,15 +25,15 @@ public class Pizza {
     }
 
     public int getPrice(){
-        return this.price;
+        return Sum;
     }
 
     public void addExtraCheese(){
         // your code goes here
-        if(arr[1]==null){
-            Sum+=80;
+        if(arr[1]==null) {
+            Sum += 80;
+            arr[1] = "Extra Cheese Added: 80\n";
         }
-       arr[1]="Extra Cheese Added: 80\n";
     }
 
     public void addExtraToppings(){
