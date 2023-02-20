@@ -6,6 +6,7 @@ public class Pizza {
     private Boolean isVeg;
     private String bill;
     String []arr;
+    boolean billg;
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
@@ -19,6 +20,7 @@ public class Pizza {
             arr[0]="Base Price Of The Pizza: 400\n";
         }
         this.bill="";
+        billg=false;
     }
 
     public int getPrice(){
@@ -59,12 +61,15 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        for(int i=0;i<4;i++){
-            if(arr[i]!=null) {
-                bill += arr[i];
+        if(!billg) {
+            for (int i = 0; i < 4; i++) {
+                if (arr[i] != null) {
+                    bill += arr[i];
+                }
             }
+            bill += "Total Price: " + this.price + "\n";
+            billg=true;
         }
-        bill+="Total Price: "+this.price+"\n";
         return this.bill;
     }
 }
