@@ -6,32 +6,29 @@ public class Pizza {
     private Boolean isVeg;
     private String bill;
     String []arr;
-    int Sum;
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
         this.arr=new String[4];
         if(isVeg){
-            price=300;
+            this.price=300;
             arr[0]="Base Price Of The Pizza: 300"+"\n";
-            Sum=300;
         }
         else{
-            price=400;
+            this.price=400;
             arr[0]="Base Price Of The Pizza: 400\n";
-            Sum=400;
         }
         this.bill="";
     }
 
     public int getPrice(){
-        return Sum;
+        return this.price;
     }
 
     public void addExtraCheese(){
         // your code goes here
         if(arr[1]==null) {
-            Sum += 80;
+            this.price += 80;
             arr[1] = "Extra Cheese Added: 80\n";
         }
     }
@@ -40,13 +37,13 @@ public class Pizza {
         // your code goes here
         if(isVeg){
             if(arr[2]==null) {
-                Sum += 70;
+                this.price += 70;
                 arr[2] = "Extra Toppings Added: 70\n";
             }
             }
         else{
             if(arr[2]==null) {
-                Sum += 120;
+                this.price += 120;
                 arr[2] = "Extra Toppings Added: 120\n";
             }
         }
@@ -56,7 +53,7 @@ public class Pizza {
         // your code goes here
         if(arr[3]==null) {
             arr[3] = "Paperbag Added: 20\n";
-            Sum += 20;
+            this.price += 20;
         }
     }
 
@@ -67,7 +64,7 @@ public class Pizza {
                 bill += arr[i];
             }
         }
-        bill+="Total Price: "+Sum+"\n";
+        bill+="Total Price: "+this.price+"\n";
         return this.bill;
     }
 }
